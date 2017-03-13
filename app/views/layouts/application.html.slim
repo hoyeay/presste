@@ -1,0 +1,41 @@
+doctype html
+
+html
+
+  head
+  
+    title
+      | Saasapp
+      
+    = csrf_meta_tags
+    link[href="//fonts.googleapis.com/css?family=Raleway:400,700,800" rel="stylesheet"]
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    
+  body
+  
+    nav.navbar.navbar-default.navbar-static-top[role="navigation"]
+      .container
+        .navbar-header
+          button.navbar-toggle[type="button" data-toggle="collapse" data-target="#main-nav-collapse"]
+            span.sr-only
+              | Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand[href="/"]
+            | Presste
+        #main-nav-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a[href="/about"]
+                | How it Works
+            li
+              a[href="/about"]
+                | FAQs
+            li
+              a[href="/about"]
+                | About
+                
+    .container
+      = yield

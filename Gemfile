@@ -32,6 +32,9 @@ gem 'jbuilder', '2.5.0'
 # Use twitter boostrap library for front-end UI and layout
 gem 'bootstrap-sass', '3.3.7'
 
+# Use slim to make html easier
+gem 'slim', '3.0.7'
+
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
