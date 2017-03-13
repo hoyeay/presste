@@ -23,18 +23,14 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand[href="/"]
-            | Presste
+            
+          = link_to root_path, class: "navbar-brand" do
+            i.fa.fa-bank
+            |  Presste
+            
         #main-nav-collapse.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
             li
-              a[href="/about"]
-                | How it Works
-            li
-              a[href="/about"]
-                | FAQs
-            li
-              a[href="/about"]
-                | About
-                
+              = link_to "About", about_path
+              
     = yield

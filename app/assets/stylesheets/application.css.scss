@@ -13,25 +13,55 @@
  *= require_tree .
  *= require_self
  */
- 
+
+// Import Bootstrap
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+// Import FontAwesome
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Typography Styles
 h1, h2, h3 {
     font-family: 'Raleway', sans-serif;
 }
-
+// Background gradient for navbar and home-callout
 .navbar, .home-callout {
     // Gradient provided by @_ighosh at uigradient.com
     background: #56ab2f; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #56ab2f , #a8e063); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #56ab2f , #a8e063); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
+// Navbar styles
 .navbar {
     border: none;
+    font-size: 16px;
+}
+.navbar-brand {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus {
+    background-color: #7adb3d;
+  }
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  &:hover, &:focus {
+      color: white;
+      opacity: 0.75;
+  }
 }
 
+// Homepage styles
 .home-callout {
     color: white;
     margin-top: -20px;
