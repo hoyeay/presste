@@ -1,3 +1,30 @@
 .home-callout.text-center.container-fluid
     h1 Welcome to Presste!
     h3 Platform for Mutual Lending
+
+.container.home-signup-links
+    .row
+        .col-md-6
+            .well
+                h2.text-center
+                    | Basic Membership
+                p.text-center
+                    | The free membership allows you to access the marketplace 
+                        but does not allows you to join or contact any mutual 
+                            lending groups or users.
+                h3.text-center
+                    | FREE.
+                br
+                = link_to "Sign up for a Free Membership", "#", class: 'btn btn-primary btn-lg btn-block'
+        .col-md-6
+            .well
+                h2.text-center
+                    | Pro Membership
+                p.text-center
+                    | The pro membership allows you to access the marketplace, 
+                        contact and add lenders, create and join mutual lending 
+                            groups, and more.
+                h3.text-center
+                    | $25 / month.
+                br
+                = link_to "Sign up for a Pro Membership", "#", class: 'btn btn-success btn-lg btn-block'
