@@ -32,5 +32,11 @@ html
           ul.nav.navbar-nav.navbar-right
             li
               = link_to "About", about_path
+            li
+              = link_to "Contact", new_contact_path
               
+    .container
+      - flash.each do |type, msg|
+        = content_tag :div, msg, class: "alert alert-#{type}"         
+        
     = yield
