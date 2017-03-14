@@ -1,32 +1,23 @@
 .container
   .row
     .col-md-4.col-md-offset-4
+      - if params[:plan] == '2'
+        h1.text-center
+          | Pro Membership
+        p.text-center
+          | Sign up for the pro membership for $25 / month and get complete access 
+              to the marketplace and its users.
+      - else
+        h1.text-center
+          | Basic Membership
+        p.text-center
+          | Sign up for the basic membership for free viewing of the marketplace.
+          
       .well
+        h2.text-center
+          | Sign Up
         - if params[:plan] == '2'
-          h2
-            | Pro Membership Sign Up
+          = render "pro_form"
         - else
-          h2
-            | Basic Membership Sign Up
-        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-          = devise_error_messages!
-          .field.form-group
-            = f.label :email
-            br
-            = f.email_field :email, autofocus: true, class: 'form-control'
-          .field.form-group
-            = f.label :password
-            - if @minimum_password_length
-              em
-                | (
-                = @minimum_password_length
-                |  characters minimum)
-            br
-            = f.password_field :password, autocomplete: "off", class: 'form-control'
-          .field.form-group
-            = f.label :password_confirmation
-            br
-            = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
-          .actions.form-group
-            = f.submit "Sign up", class: 'btn btn-success'
+          = render "basic_form"
         = render "devise/shared/links"
