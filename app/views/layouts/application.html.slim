@@ -1,19 +1,15 @@
 doctype html
 
 html
-
   head
-  
     title
       | Saasapp
-      
     = csrf_meta_tags
     link[href="//fonts.googleapis.com/css?family=Raleway:400,700,800" rel="stylesheet"]
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     
   body
-  
     nav.navbar.navbar-default.navbar-static-top[role="navigation"]
       .container
         .navbar-header
@@ -29,6 +25,9 @@ html
             |  Presste
             
         #main-nav-collapse.collapse.navbar-collapse
+          .nav.navbar-nav.navbar-right
+            = link_to "Signup", new_user_registration_path, class: 'btn btn-default navbar-btn'
+            = link_to "Login", new_user_session_path, class: 'btn btn-default navbar-btn'
           ul.nav.navbar-nav.navbar-right
             li
               = link_to "About", about_path
