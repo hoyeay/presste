@@ -1,0 +1,9 @@
+doctype html
+html
+    head
+    body
+        p
+            | You have received a message from the site's contact form.
+        = "#{ @name }, #{ @email }."
+        p
+            = @body
