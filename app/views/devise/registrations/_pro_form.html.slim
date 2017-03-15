@@ -14,7 +14,9 @@
         | (
         = @minimum_password_length
         |  characters minimum)
+        
     br
+    
     = f.password_field :password, autocomplete: "off", class: 'form-control'
   .field.form-group
     = f.label :password_confirmation
