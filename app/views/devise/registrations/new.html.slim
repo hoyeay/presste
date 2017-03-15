@@ -1,6 +1,6 @@
 .container
   .row
-    .col-md-4.col-md-offset-4
+    .col-md-4
       - if params[:plan] == '2'
         h1.text-center
           | Pro Membership
@@ -21,3 +21,6 @@
         - else
           = render "basic_form"
         = render "devise/shared/links"
+    .col-md-8
+      h3.text-center
+        | Features:
